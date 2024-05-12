@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="/logo.avif" alt="Hospital Logo Left" class="logo">
+        <h1>Hospital Management System</h1>
+        <img src="/logo.avif" alt="Hospital Logo Right" class="logo">
+    </header>
+
+    <main>
+        <section id="patient-form">
+            <h2>Add Patient</h2>
+            <form id="new-patient-form">
+                <label for="patient-name">Name:</label>
+                <input type="text" id="patient-name" required>
+
+                <label for="patient-age">Age:</label>
+                <input type="number" id="patient-age" required>
+
+                <label for="patient-gender">Gender:</label>
+                <select id="patient-gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <div class="form-buttons">
+                    <button type="submit">Add Patient</button>
+                    <button type="button" id="clear-form">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="patient-list">
+            <h2>Patient List</h2>
+            <button type="button" id="clear-all">Clear All</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-table-body">
+                    <!-- Patients will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
